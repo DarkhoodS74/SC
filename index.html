@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сам собі творець</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Навігація -->
+    <nav>
+        <ul>
+            <li><a href="#">Головна</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <!-- Банер -->
+    <header class="banner">
+        <h1>Сам собі творець</h1>
+        <p>Книга, що змінить ваше життя!</p>
+    </header>
+
+    <!-- Товари -->
+    <section class="products">
+        <div class="product">
+            <h2>Книга "Сам собі творець"</h2>
+            <p class="price">600 грн</p>
+            <button class="order-btn" data-product="Книга 'Сам собі творець'">Замовити</button>
+        </div>
+        <div class="product">
+            <h2>Електронна книга "Сам собі творець"</h2>
+            <p class="price">250 грн</p>
+            <button class="order-btn" data-product="Електронна книга 'Сам собі творець'">Замовити</button>
+        </div>
+    </section>
+
+    <!-- Поп-ап форма замовлення -->
+    <div class="popup" id="orderPopup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Заповніть дані для замовлення</h2>
+            <form id="orderForm">
+                <input type="text" id="name" placeholder="Ваше ПІБ" required>
+                <input type="text" id="city" placeholder="Місто" required>
+                <input type="text" id="phone" placeholder="Номер телефону" required>
+                <input type="text" id="novaPoshta" placeholder="Номер відділення Нової Пошти" required>
+                <button type="button" id="paymentButton">Оплатити</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Поп-ап вибору оплати -->
+    <div class="popup" id="paymentPopup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Оберіть спосіб оплати</h2>
+            <a id="privatLink" href="#" target="_blank" class="payment-btn">ПриватБанк</a>
+            <a id="monoLink" href="#" target="_blank" class="payment-btn">Монобанк</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
