@@ -1,47 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #ff0;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    background-color: #fff;
 }
+
 nav ul {
-    list-style: none;
-    padding: 0;
-    background: #222;
     display: flex;
-    justify-content: center;
-    margin: 0;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
 }
+
 nav ul li {
-    margin: 10px;
+    list-style: none;
 }
+
 nav ul li a {
-    color: #ff0;
+    color: #fff;
     text-decoration: none;
+    padding: 10px;
 }
-.banner {
-    padding: 50px 20px;
-    background: #111;
-}
-.products {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+
+section {
     padding: 20px;
 }
+
+.home {
+    position: relative;
+    color: #fff;
+}
+
+.background-img {
+    width: 100%;
+    height: auto;
+    filter: blur(8px);
+}
+
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.book-image {
+    max-width: 300px;
+    margin-top: 20px;
+}
+
 .product {
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
+    margin-bottom: 20px;
 }
-.order-btn {
-    background: #ff0;
+
+.carousel img {
+    max-width: 100px;
+    margin: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #ffcc00;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
+    transition: transform 0.3s;
 }
+
+button:hover {
+    transform: scale(1.1);
+}
+
 .popup {
     display: none;
     position: fixed;
@@ -49,12 +82,31 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
 }
+
 .popup-content {
-    background: #222;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+form input, form button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+form input[type="number"] {
+    max-width: 60px;
 }
