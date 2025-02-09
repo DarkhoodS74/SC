@@ -1,121 +1,124 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сам собі творець</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#" class="popup-link" data-target="delivery-popup">Доставка</a></li>
+                <li><a href="#" class="popup-link" data-target="payment-popup">Оплата</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Меню -->
-    <nav>
-        <ul>
-            <li><a href="#home">Головна</a></li>
-            <li><a href="#delivery">Доставка</a></li>
-            <li><a href="#payment">Оплата</a></li>
-            <li><a href="#contacts">Контакти</a></li>
-        </ul>
-    </nav>
-
-    <!-- Головна сторінка -->
-    <section id="home" class="home">
-        <img src="IMG_1262.jpeg" alt="Ліс" class="background-img">
-        <div class="main-content">
+    <section class="hero" style="background-image: url('IMG_1262.jpeg');">
+        <div class="hero-content">
             <h1>САМ СОБІ ТВОРЕЦЬ</h1>
             <p>Ким би ти не був, будь краще!</p>
-            <img src="IMG_1260.jpeg" alt="Титульна книга" class="book-image">
+            <img src="IMG_1260.jpeg" alt="Титульна сторінка книги" class="book-cover">
         </div>
     </section>
 
-    <!-- Товари -->
-    <section id="products">
+    <section class="products">
         <div class="product">
-            <h2>Книга "САМ СОБІ ТВОРЕЦЬ"</h2>
             <div class="carousel">
-                <img src="IMG_1260.jpeg" alt="Книга">
-                <img src="IMG_1261.jpeg" alt="Книга">
+                <img src="IMG_1260.jpeg" alt="Книга" />
+                <img src="IMG_1261.jpeg" alt="Книга 2" />
             </div>
-            <p>Ціна: 600 грн</p>
-            <button class="orderBtn" data-product="book">Замовити</button>
+            <h2>Книга «САМ СОБІ ТВОРЕЦЬ»</h2>
+            <p>600 грн</p>
+            <button class="order-button" data-target="order-popup-book">Замовити</button>
         </div>
         <div class="product">
-            <h2>Електронна Книга "САМ СОБІ ТВОРЕЦЬ"</h2>
             <div class="carousel">
-                <img src="IMG_1260.jpeg" alt="Електронна книга">
-                <img src="IMG_1261.jpeg" alt="Електронна книга">
+                <img src="IMG_1260.jpeg" alt="Книга електронна" />
+                <img src="IMG_1261.jpeg" alt="Електронна книга" />
             </div>
-            <p>Ціна: 250 грн</p>
-            <button class="orderBtn" data-product="ebook">Замовити</button>
+            <h2>Електронна Книга «САМ СОБІ ТВОРЕЦЬ»</h2>
+            <p>250 грн</p>
+            <button class="order-button" data-target="order-popup-ebook">Замовити</button>
         </div>
     </section>
 
-    <!-- Блок Опис книги -->
     <section id="description">
         <h2>Опис книги</h2>
-        <p>
-            САМ СОБІ ТВОРЕЦЬ — квінтесенція відомих принципів успіху, подана крізь призму власного досвіду автора. Якщо ти вирішив змінити своє життя, тобі доведеться боротися не тільки з реальністю, яка тебе не влаштовує, а й із самим собою. Практичні поради й приклади, наведені в книзі, допоможуть тобі подолати такі поширені проблеми, як лінь, страхи, відсутність мотивації та дисципліни.
-        </p>
+        <p>САМ СОБІ ТВОРЕЦЬ — квінтесенція відомих принципів успіху, подана крізь призму власного досвіду автора...</p>
     </section>
 
-    <!-- Блок Контакти -->
     <section id="contacts">
         <h2>Контакти</h2>
         <p>Відгуки, пропозиції та будь-які запитання надсилайте мені зручним для вас способом!</p>
-        <p>Email: vladislovenirvana@gmail.com</p>
-        <div class="social-links">
+        <p>Email: <a href="mailto:vladislovenirvana@gmail.com">vladislovenirvana@gmail.com</a></p>
+        <div class="social-media">
             <a href="https://www.instagram.com/vladyslav_katana/" target="_blank">Instagram</a>
             <a href="https://www.facebook.com/profile.php?id=100016166288906" target="_blank">Facebook</a>
             <a href="https://t.me/Vlad_Katana" target="_blank">Telegram</a>
         </div>
     </section>
 
-    <!-- Поп-ап Форма Замовлення -->
-    <div id="orderForm" class="popup">
+    <!-- Pop-up Forms -->
+    <div class="popup" id="delivery-popup">
         <div class="popup-content">
-            <button class="closeBtn">×</button>
-            <h3 id="orderTitle">Замовити книгу</h3>
-            <form id="orderDetails">
-                <label for="name">Ім'я:</label>
-                <input type="text" id="name" required>
+            <button class="close-popup">×</button>
+            <h3>Доставка</h3>
+            <p>Доставка книги по Україні здійснюється сервісом «Нова Пошта». Після оформлення замовлення...</p>
+        </div>
+    </div>
 
-                <label for="surname">Прізвище:</label>
-                <input type="text" id="surname" required>
+    <div class="popup" id="payment-popup">
+        <div class="popup-content">
+            <button class="close-popup">×</button>
+            <h3>Оплата</h3>
+            <p>Дякую за замовлення! Книга буде відправлена протягом 1-2 днів. Оберіть спосіб оплати:</p>
+            <a href="https://www.privat24.ua/send/29t65" target="_blank">ПриватБанк</a>
+            <a href="https://send.monobank.ua/AaQLnpDp5t" target="_blank">Монобанк</a>
+        </div>
+    </div>
 
-                <label for="phone">Номер телефону:</label>
-                <input type="text" id="phone" required>
-
-                <label for="city">Місто:</label>
-                <input type="text" id="city" required>
-
-                <label for="post">Номер відділення нової пошти:</label>
-                <input type="text" id="post" required>
-
+    <!-- Order Forms -->
+    <div class="popup" id="order-popup-book">
+        <div class="popup-content">
+            <button class="close-popup">×</button>
+            <h3>Замовити книгу</h3>
+            <form action="mailto:vladislovenirvana@gmail.com" method="post">
+                <input type="text" name="name" placeholder="Ім'я" required />
+                <input type="text" name="surname" placeholder="Прізвище" required />
+                <input type="tel" name="phone" placeholder="Номер телефону" required />
+                <input type="text" name="city" placeholder="Місто" required />
+                <input type="text" name="post-office" placeholder="Номер відділення нової пошти" required />
                 <label for="quantity">Кількість книг:</label>
-                <input type="number" id="quantity" value="1" min="1" required>
-
-                <p id="cost">Вартість: 600 грн</p>
-                <button type="submit">Замовити</button>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" required />
+                <p>Вартість: <span id="book-price">600</span> грн</p>
+                <button type="submit" class="order-button">Замовити</button>
             </form>
         </div>
     </div>
 
-    <!-- Поп-ап Форма Оплати -->
-    <div id="paymentForm" class="popup">
+    <div class="popup" id="order-popup-ebook">
         <div class="popup-content">
-            <button class="closeBtn">×</button>
-            <h3>Дякую за замовлення!</h3>
-            <p>Книга буде відправлена протягом 1-2 днів.</p>
-            <p>Оберіть спосіб оплати:</p>
-            <a href="https://www.privat24.ua/send/29t65" target="_blank">
-                <button>ПриватБанк</button>
-            </a>
-            <a href="https://send.monobank.ua/AaQLnpDp5t" target="_blank">
-                <button>Монобанк</button>
-            </a>
+            <button class="close-popup">×</button>
+            <h3>Замовити електронну книгу</h3>
+            <form action="mailto:vladislovenirvana@gmail.com" method="post">
+                <input type="text" name="name" placeholder="Ім'я" required />
+                <input type="text" name="surname" placeholder="Прізвище" required />
+                <input type="tel" name="phone" placeholder="Номер телефону" required />
+                <input type="email" name="email" placeholder="E-mail" required />
+                <button type="submit" class="order-button">Замовити</button>
+            </form>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
+
 </html>
