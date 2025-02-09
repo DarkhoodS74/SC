@@ -1,3 +1,13 @@
+// Пункти меню: прокручування до секцій
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+// Поп-апи
 document.querySelectorAll('.orderBtn').forEach(button => {
     button.addEventListener('click', function() {
         const product = this.getAttribute('data-product');
