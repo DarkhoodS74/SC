@@ -7,60 +7,93 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Навігація -->
+    <!-- Меню -->
     <nav>
         <ul>
-            <li><a href="#">Головна</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Оплата</a></li>
-            <li><a href="#">Контакти</a></li>
+            <li><a href="#home">Головна</a></li>
+            <li><a href="#delivery" id="deliveryBtn">Доставка</a></li>
+            <li><a href="#payment" id="paymentBtn">Оплата</a></li>
+            <li><a href="#contacts">Контакти</a></li>
         </ul>
     </nav>
 
-    <!-- Банер -->
-    <header class="banner">
-        <h1>Сам собі творець</h1>
-        <p>Книга, що змінить ваше життя!</p>
-    </header>
-
-    <!-- Товари -->
-    <section class="products">
-        <div class="product">
-            <h2>Книга "Сам собі творець"</h2>
-            <p class="price">600 грн</p>
-            <button class="order-btn" data-product="Книга 'Сам собі творець'">Замовити</button>
+    <!-- Головна сторінка -->
+    <section id="home" class="home">
+        <div class="background">
+            <img src="IMG_1262.jpeg" alt="Background Forest" class="background-img">
         </div>
-        <div class="product">
-            <h2>Електронна книга "Сам собі творець"</h2>
-            <p class="price">250 грн</p>
-            <button class="order-btn" data-product="Електронна книга 'Сам собі творець'">Замовити</button>
+        <div class="main-content">
+            <h1>САМ СОБІ ТВОРЕЦЬ</h1>
+            <p>Ким би ти не був, будь краще!</p>
+            <img src="IMG_1260.jpeg" alt="Book Title Image" class="book-image">
         </div>
     </section>
 
-    <!-- Поп-ап форма замовлення -->
-    <div class="popup" id="orderPopup">
+    <!-- Товари -->
+    <section id="products">
+        <h2>Товари</h2>
+        <div class="product">
+            <h3>Книга «САМ СОБІ ТВОРЕЦЬ»</h3>
+            <div class="carousel">
+                <img src="IMG_1260.jpeg" alt="Book Image 1">
+                <img src="IMG_1261.jpeg" alt="Book Image 2">
+            </div>
+            <p>Ціна: 600 грн</p>
+            <button class="orderBtn" data-product="book">Замовити</button>
+        </div>
+        <div class="product">
+            <h3>Електронна книга «САМ СОБІ ТВОРЕЦЬ»</h3>
+            <div class="carousel">
+                <img src="IMG_1260.jpeg" alt="E-book Image 1">
+                <img src="IMG_1261.jpeg" alt="E-book Image 2">
+            </div>
+            <p>Ціна: 250 грн</p>
+            <button class="orderBtn" data-product="ebook">Замовити</button>
+        </div>
+    </section>
+
+    <!-- Поп-ап форми для замовлення -->
+    <div id="orderForm" class="popup">
         <div class="popup-content">
-            <span class="close">&times;</span>
-            <h2>Заповніть дані для замовлення</h2>
-            <form id="orderForm">
-                <input type="text" id="name" placeholder="Ваше ПІБ" required>
-                <input type="text" id="city" placeholder="Місто" required>
-                <input type="text" id="phone" placeholder="Номер телефону" required>
-                <input type="text" id="novaPoshta" placeholder="Номер відділення Нової Пошти" required>
-                <button type="button" id="paymentButton">Оплатити</button>
+            <span class="closeBtn">&times;</span>
+            <h3 id="orderTitle"></h3>
+            <form id="orderDetails">
+                <input type="text" name="name" placeholder="Ім'я" required>
+                <input type="text" name="surname" placeholder="Прізвище" required>
+                <input type="tel" name="phone" placeholder="Номер телефону" required>
+                <input type="text" name="city" placeholder="Місто" required>
+                <input type="text" name="branch" placeholder="Номер відділення нової пошти" required>
+                <label for="quantity">Кількість книг</label>
+                <input type="number" name="quantity" value="1" min="1" required>
+                <p id="cost">Вартість: 600 грн</p>
+                <button type="submit">Замовити</button>
             </form>
         </div>
     </div>
 
-    <!-- Поп-ап вибору оплати -->
-    <div class="popup" id="paymentPopup">
+    <!-- Оплата форма -->
+    <div id="paymentForm" class="popup">
         <div class="popup-content">
-            <span class="close">&times;</span>
-            <h2>Оберіть спосіб оплати</h2>
-            <a id="privatLink" href="#" target="_blank" class="payment-btn">ПриватБанк</a>
-            <a id="monoLink" href="#" target="_blank" class="payment-btn">Монобанк</a>
+            <span class="closeBtn">&times;</span>
+            <h3>Дякую за замовлення!</h3>
+            <p>Книга буде відправлена протягом 1-2 днів.</p>
+            <p>Оберіть спосіб оплати:</p>
+            <button><a href="https://www.privat24.ua/send/29t65" target="_blank">ПриватБанк</a></button>
+            <button><a href="https://send.monobank.ua/AaQLnpDp5t" target="_blank">Монобанк</a></button>
         </div>
     </div>
+
+    <!-- Контакти -->
+    <section id="contacts">
+        <h2>Контакти</h2>
+        <p>Відгуки, пропозиції та будь-які запитання надсилайте мені зручним для вас способом!</p>
+        <p>Email: <a href="mailto:vladislovenirvana@gmail.com">vladislovenirvana@gmail.com</a></p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/vladyslav_katana/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=100016166288906" target="_blank">Facebook</a>
+            <a href="https://t.me/Vlad_Katana" target="_blank">Telegram</a>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
