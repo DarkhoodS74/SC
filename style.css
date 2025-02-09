@@ -1,3 +1,11 @@
+/* Задати основні кольори для стилю */
+:root {
+    --main-color: #ffcc00; /* Жовтий */
+    --bg-color: #333; /* Темний фон */
+    --text-color: #fff; /* Білий текст */
+}
+
+/* Загальні стилі */
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +13,16 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 nav ul {
     display: flex;
     justify-content: space-around;
-    background-color: #333;
-    padding: 10px;
+    background-color: #222;
+    padding: 15px;
 }
 
 nav ul li {
@@ -21,24 +30,30 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     padding: 10px;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: var(--main-color);
+    border-radius: 5px;
 }
 
 section {
-    padding: 20px;
+    padding: 50px 20px;
 }
 
 .home {
     position: relative;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .background-img {
     width: 100%;
     height: auto;
-    filter: blur(8px);
+    filter: blur(10px);
 }
 
 .main-content {
@@ -56,23 +71,32 @@ section {
 
 .product {
     margin-bottom: 20px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .carousel img {
     max-width: 100px;
     margin: 5px;
+    border-radius: 5px;
 }
 
 button {
-    padding: 10px;
-    background-color: #ffcc00;
+    padding: 15px 25px;
+    background-color: var(--main-color);
     border: none;
+    color: var(--bg-color);
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
     transition: transform 0.3s;
 }
 
 button:hover {
     transform: scale(1.1);
+    background-color: #ffb300;
 }
 
 .popup {
@@ -88,25 +112,46 @@ button:hover {
 }
 
 .popup-content {
-    background-color: #fff;
-    padding: 20px;
+    background-color: var(--bg-color);
+    padding: 30px;
     border-radius: 8px;
-    width: 300px;
+    width: 350px;
+    text-align: center;
 }
 
 .closeBtn {
     position: absolute;
     top: 10px;
     right: 10px;
+    font-size: 20px;
     cursor: pointer;
+    color: var(--text-color);
 }
 
 form input, form button {
     width: 100%;
     margin: 10px 0;
-    padding: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
 }
 
 form input[type="number"] {
     max-width: 60px;
+}
+
+form input, form button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.social-links a {
+    color: var(--main-color);
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
 }
